@@ -38,6 +38,7 @@
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
 		CA81A657196263D6002C3F83 /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = CA81A656196263D6002C3F83 /* Grid.m */; };
 		CA81A65B19626433002C3F83 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = CA81A65A19626433002C3F83 /* Tile.m */; };
+		CA9795871967372400EFDEFA /* GameEnd.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9795861967372400EFDEFA /* GameEnd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		CA81A656196263D6002C3F83 /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Grid.m; path = Source/Grid.m; sourceTree = "<group>"; };
 		CA81A65919626433002C3F83 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tile.h; path = Source/Tile.h; sourceTree = "<group>"; };
 		CA81A65A19626433002C3F83 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tile.m; path = Source/Tile.m; sourceTree = "<group>"; };
+		CA9795851967372400EFDEFA /* GameEnd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameEnd.h; path = Source/GameEnd.h; sourceTree = "<group>"; };
+		CA9795861967372400EFDEFA /* GameEnd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameEnd.m; path = Source/GameEnd.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +142,8 @@
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
+				CA9795851967372400EFDEFA /* GameEnd.h */,
+				CA9795861967372400EFDEFA /* GameEnd.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				CA81A657196263D6002C3F83 /* Grid.m in Sources */,
+				CA9795871967372400EFDEFA /* GameEnd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

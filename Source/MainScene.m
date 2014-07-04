@@ -26,6 +26,8 @@
 {
     if ([keyPath isEqualToString:@"score"]) {
         _scoreLabel.string = [NSString stringWithFormat:@"%d", _grid.score];
+    } else if ([keyPath isEqualToString:@"highscore"]) {
+        [self updateHighscore];
     }
 }
 

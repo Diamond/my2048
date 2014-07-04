@@ -8,6 +8,7 @@
 
 #import "Grid.h"
 #import "Tile.h"
+#import "GameEnd.h"
 
 @implementation Grid {
     CGFloat _columnWidth;
@@ -296,7 +297,13 @@ static const NSInteger WIN_TILE    = 2048;
         [[NSUserDefaults standardUserDefaults] setObject:highScore forKey:@"highscore"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
-    CCLOG(@"%@",message);
+
+    GameEnd *gameEndPopover = (GameEnd*)[CCBReader load:@"GameEnd"];
+    gameEndPopover.positionType = CCPositionTypeNormalized;
+    gameEndPopover.position = ccp(0.5, 0.5);
+    gameEndPopover.zOrder = INT_MAX;
+    [gameEndPopover setMessage:message score:self.score];
+    [self addChild:gameEndPopover];
 }
 
 -(BOOL)movePossible
