@@ -15,4 +15,20 @@
     CCLabelTTF *_highscoreLabel;
 }
 
+-(void)didLoadFromCCB
+{
+    [_grid addObserver:self forKeyPath:@"score" options:0 context:NULL];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"score"]) {
+        _scoreLabel.string = [NSString stringWithFormat:@"%d", _grid.score];
+    }
+}
+
+-(void)dealloc {
+    [_grid removeObserver:self forKeyPath:@"score"];
+}
+
 @end
