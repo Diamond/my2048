@@ -18,6 +18,8 @@
 -(void)didLoadFromCCB
 {
     [_grid addObserver:self forKeyPath:@"score" options:0 context:NULL];
+    [[NSUserDefaults standardUserDefaults] addObserver:self forKeyPath:@"highscore" options:0 context:NULL];
+    [self updateHighscore];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -29,6 +31,14 @@
 
 -(void)dealloc {
     [_grid removeObserver:self forKeyPath:@"score"];
+}
+
+-(void)updateHighscore
+{
+    NSNumber *newHighscore = [[NSUserDefaults standardUserDefaults] objectForKey:@"highscore"];
+    if (newHighscore) {
+        _highscoreLabel.string = [NSString stringWithFormat:@"%d",[newHighscore intValue]];
+    }
 }
 
 @end

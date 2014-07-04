@@ -290,6 +290,12 @@ static const NSInteger WIN_TILE    = 2048;
 
 -(void)endGameWithMessage:(NSString*)message
 {
+    NSNumber *highScore = [[NSUserDefaults standardUserDefaults] objectForKey:@"highscore"];
+    if (self.score > [highScore intValue]) {
+        highScore = [NSNumber numberWithInt:self.score];
+        [[NSUserDefaults standardUserDefaults] setObject:highScore forKey:@"highscore"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
     CCLOG(@"%@",message);
 }
 
